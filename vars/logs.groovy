@@ -27,12 +27,14 @@ sh """set +x; echo -e "${ON_YELLOW} [WARN] - $message ${NC}" """
 
 
 def error(message, throwException) {
-loadColors) 
+loadColors()
 sh """set +x; echo -e "${RED} [ERROR] - $message ${NC}" """
 if (throwException) {
     throw new RuntimeException(message)
 }
 }
 def debug(message) {
-loadColors) sh"" "set +x; echo -e "${BLUE} [DEBUG] - $message ${NC}" """
+loadColors()
+sh """set +x; echo -e "${BLUE} [DEBUG] - $message ${NC}" """
 }
+
