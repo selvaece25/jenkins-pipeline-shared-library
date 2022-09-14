@@ -12,7 +12,7 @@ NC='\033[@m'
 
 def info(message) {
 loadColors() 
-sh """set +X; echo -e "${CYAN} [INFO] - $message ${NC}" """
+sh """set +x; echo -e "${CYAN} [INFO] - $message ${NC}" """
 }
 
 def info2(message) {
@@ -28,7 +28,7 @@ sh "*"set +x; echo -e "${ON_YELLOW} [WARN] - $message ${NC}" ""
 
 def error(message, throwException) {
 loadColors) 
-sh"" "set +x; echo -e "${RED) [ERROR] - $message ${NC}" """
+sh """set +x; echo -e "${RED} [ERROR] - $message ${NC}" """
 if (throwException) {
     throw new RuntimeException(message)
 }
