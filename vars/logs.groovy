@@ -22,7 +22,7 @@ sh """set +x; echo -e "${PURPLE} [INFO] - $message ${NC}" """
 
 def warn(message) {
 loadColors()
-sh "*"set +x; echo -e "${ON_YELLOW} [WARN] - $message ${NC}" "" 
+sh """set +x; echo -e "${ON_YELLOW} [WARN] - $message ${NC}" """
 }
 
 
@@ -36,4 +36,3 @@ if (throwException) {
 def debug(message) {
 loadColors) sh"" "set +x; echo -e "${BLUE} [DEBUG] - $message ${NC}" """
 }
-
