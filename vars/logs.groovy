@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def loadcolors() {
+def loadColors() {
 RED='\033[0;31m' 
 BLUE='\033[0;34m'
 CYAN='\033[0;36m'
@@ -11,7 +11,7 @@ NC='\033[@m'
 }
 
 def info(message) {
-loadColors() 
+loadColors()
 sh """set +x; echo -e "${CYAN} [INFO] - $message ${NC}" """
 }
 
